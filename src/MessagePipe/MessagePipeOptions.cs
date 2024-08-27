@@ -119,7 +119,7 @@ namespace MessagePipe
 
         List<FilterDefinition> messageHandlerFilters = new List<FilterDefinition>();
 
-#if !UNITY_2018_3_OR_NEWER
+// #if !UNITY_2018_3_OR_NEWER
 
         /// <summary>
         /// If register open generics(typeof(MyFilter&lt;&gt;)) to register all message types.
@@ -130,7 +130,7 @@ namespace MessagePipe
             messageHandlerFilters.Add(new MessageHandlerFilterDefinition(type, order, typeof(MessageHandlerFilter<>)));
         }
 
-#endif
+// #endif
 
         public void AddGlobalMessageHandlerFilter<T>(int order = 0)
             where T : IMessageHandlerFilter
